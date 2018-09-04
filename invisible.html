@@ -1,0 +1,24 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>Invisible reCaptcha</title>
+	<script src='https://www.google.com/recaptcha/api.js'></script>
+	<script type="text/javascript">
+		function YourOnSubmitFn(){
+			console.log("YourOnSubmitFn");
+			document.getElementById("form").submit();
+		}
+	</script>
+</head>
+<body>
+	<h1>Invisible reCaptcha</h1>
+	<form id="form" action="request.php">
+		<button
+			class="g-recaptcha"
+			data-sitekey="6Ld3XG4UAAAAAMhQ9I5e06VRfhMwx1EolxRkk8Mg"
+			data-callback="YourOnSubmitFn">
+			Submit
+		</button>
+	</form>
+</body>
+</html>
